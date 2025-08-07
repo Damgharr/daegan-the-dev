@@ -1,0 +1,132 @@
+:root {
+
+    --primary-color: lightgreen;
+    --secondary-color: green;
+    --text-primary-color: #363636;
+    --text-secondary-color: darkblue;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("ubuntuFont/Ubuntu-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    background-image: url("images/background.png");
+    font-family: "Ubuntu";
+}
+
+h1 {
+    color: var(--text-primary-color);
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header {
+    & > div:first-child {
+        height: 6rem;
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & > div:last-child  {
+        display: grid;
+        padding: 0 15%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+        height: 30rem;
+        background-color: black;
+        align-content: center;
+
+        & h1 {
+            color: white;
+            text-align: right;
+
+             & span {
+                font-size: larger;
+             }
+        }
+    }
+
+}
+
+main {
+    margin: 0rem 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    & h2 {
+        color: var(--secondary-color)
+    }
+
+    & section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        padding: 2rem;
+    }
+
+    & section:last-child {
+
+        & div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 2rem;
+            background-color: var(--text-primary-color);
+            border-radius: 2rem;
+
+            & a {
+                width: 32rem;
+                aspect-ratio: 1/1;
+                overflow: hidden;
+                border: 1px solid white;
+                box-shadow: 0px 0px 10px white;
+
+                & img {
+                    height: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: var(--secondary-color);
+    height: 12rem;
+    padding: 2rem 15%;
+    color: white;
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        margin: 4rem 0;
+    }
+}
