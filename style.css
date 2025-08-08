@@ -4,6 +4,8 @@
     --secondary-color: green;
     --text-primary-color: #363636;
     --text-secondary-color: darkblue;
+
+    --desktop-main-container-size: 720px;
 }
 
 @font-face {
@@ -15,6 +17,8 @@ body {
     margin: 0;
     background-image: url("images/background.png");
     font-family: "Ubuntu";
+
+
 }
 
 h1 {
@@ -43,26 +47,41 @@ ul {
 }
 
 header {
+    background-color: black;
+    padding-bottom: 6rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+
     & > div:first-child {
-        height: 6rem;
+        height: 8rem;
         background-color: var(--primary-color);
         display: flex;
         justify-content: center;
         align-items: center;
+        clip-path: polygon(0 0%, 100% 0%, 100% 70%, 0% 100%);
     }
 
     & > div:last-child  {
         display: grid;
         padding: 0 15%;
         grid-template-columns: 1fr 1fr;
-        gap: 10rem;
         height: 30rem;
-        background-color: black;
         align-content: center;
+
+        & > div {
+            background: radial-gradient(circle, var(--secondary-color), black 70%);      
+            padding: 2rem;    
+
+            & img {
+                width: 30rem;
+            }
+        }
+
 
         & h1 {
             color: white;
             text-align: right;
+            align-self: center;
+            text-shadow: -30px -10px 5px var(--secondary-color);
 
              & span {
                 font-size: larger;
