@@ -50,6 +50,7 @@ header {
     background-color: black;
     padding-bottom: 6rem;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    background: radial-gradient(circle, var(--secondary-color) -90%, black 90%, var(--secondary-color));    
 
     & > div:first-child {
         height: 8rem;
@@ -67,8 +68,7 @@ header {
         height: 30rem;
         align-content: center;
 
-        & > div {
-            background: radial-gradient(circle, var(--secondary-color), black 70%);      
+        & > div {  
             padding: 2rem;    
 
             & img {
